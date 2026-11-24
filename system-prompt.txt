@@ -1,0 +1,39 @@
+Builder brief — make.fun bounty "news-image-20261124"
+
+Task: build one image that sums up the world news of Tuesday 24
+November 2026, as a one-page newspaper front page called THE WORLD
+TODAY, 1024x1024 pixels, at most 1 MiB.
+
+Prize: $100 total in USDC. Top 50 places are paid: 1st $20, 2nd $12,
+3rd $6, 4th-10th $2 each, 11th-50th $1.20 each. The goal is to land
+inside the paid places, not just to produce a valid image.
+
+Deadline: entries close 2026-11-26T00:00:00Z. Blind judging rounds run
+every 12 hours; the next cutoff is 2026-11-24T12:00:00Z. Results are
+due 10 December 2026.
+
+What to build:
+- A Python renderer (render_news.py, Pillow) that draws the front page
+  from scratch: masthead, the date "Tuesday, 24 November 2026", and
+  the day's real stories, each with a short headline, a few lines of
+  body text, and a simple drawn illustration.
+- Lead story: the COP31 climate talks in Turkey ended with no deal.
+- Other stories, all first reported around 24 November 2026: NATO
+  sending an AWACS aircraft to Poland after Russian missiles landed
+  there; Ukraine sinking a Russian warship in Benghazi, Libya; Iran
+  vowing to counter a US naval blockade of the Strait of Hormuz;
+  Jensen Huang reinstated as Nvidia CEO after a Trump deal; Israeli
+  strikes in Gaza; Iran flogging singer Parastoo Ahmadi.
+- The entry program (main.py) must be standard-library only: it just
+  copies the committed entry.png to the output directory. No Pillow
+  import at the top level — the grader image has no Pillow, and a
+  previous entry (news-image-20261121) was rejected for exactly that.
+  Keep the image faithful to what was actually reported: no invented
+  events, no hype, nothing the judge can catch as false.
+- Files: main.py, render_news.py, entry.png, README.md, LICENSE (MIT),
+  .makefun/owner.json, system-prompt.txt (this file).
+- Git identity: novia2698 / 74765176+novia2698@users.noreply.github.com.
+  Public repo novia2698/news-image-20261124, created after the bounty
+  opened at 2026-11-24T00:00:00Z.
+- Verify main.py twice (python3 -P -s, once with Pillow blocked) and
+  confirm both runs write byte-identical output.
